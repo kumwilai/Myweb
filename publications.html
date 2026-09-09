@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="author" content="Wuttipong Kumwilaisak">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<script src="js/site.js"></script>
+<title>Publications | Wuttipong Kumwilaisak</title>
+<meta name="description" content="Thirty one journal papers and two United States patents by Wuttipong Kumwilaisak.">
+</head>
+<body>
+<nav class="nav">
+  <div class="wrap">
+    <a class="brand" href="index.html">Wuttipong Kumwilaisak</a>
+    <div class="menu">
+      <a class="link" href="index.html">Home</a>
+      <a class="link" href="research.html">Research</a>
+      <a class="link" href="publications.html">Publications</a>
+      <a class="link" href="cv.html">CV</a>
+    </div>
+    <button class="iconbtn navtoggle" aria-label="Menu">&#9776;</button>
+    <button class="iconbtn" onclick="toggleTheme()" aria-label="Switch theme">&#9681;</button>
+  </div>
+</nav>
+
+<section style="border-top:0;padding-bottom:26px">
+  <div class="wrap">
+    <div class="eyebrow">Publications</div>
+    <h1 style="font-size:38px;margin:10px 0 12px">Journal papers and patents</h1>
+    <p class="lede">Thirty one peer reviewed journal papers and two United States patents. Search by
+    title, author or venue, or filter by topic. The list is newest first.</p>
+    <div class="pills">
+      <span class="pill">785 citations</span>
+      <span class="pill">h index 15</span>
+      <span class="pill">i10 index 21</span>
+    </div>
+    <p class="sub" style="margin-top:-14px">Google Scholar, observed September 2026.
+      <a href="https://scholar.google.com/citations?user=QSeweikAAAAJ&amp;hl=en" target="_blank" rel="noopener">Profile</a>
+      &middot; <a href="https://orcid.org/0000-0002-2957-6084" target="_blank" rel="noopener">ORCID</a>
+      &middot; <a href="https://ieeexplore.ieee.org/author/37299722400" target="_blank" rel="noopener">IEEE Xplore</a>
+    </p>
+  </div>
+</section>
+
+<section style="padding-top:8px">
+  <div class="wrap">
+    <div class="pubbar">
+      <input id="q" type="search" placeholder="Search titles, authors and venues" aria-label="Search publications">
+      <button class="chip on" data-k="all">All</button>
+      <button class="chip" data-k="learning">Machine learning</button>
+      <button class="chip" data-k="vision">Vision and imaging</button>
+      <button class="chip" data-k="media">Multimedia coding</button>
+      <button class="chip" data-k="networks">Networking</button>
+      <button class="chip" data-k="speech">Speech</button>
+      <span class="count" id="count"></span>
+    </div>
+    <div id="list"></div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>Patents</h2>
+    <p class="sub">Granted in the United States, from work with Thomson and Technicolor.</p>
+    <div id="patents"></div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <span>Wuttipong Kumwilaisak, King Mongkut's University of Technology Thonburi</span>
+    <span><a href="mailto:wuttipong.kum@kmutt.ac.th">wuttipong.kum@kmutt.ac.th</a></span>
+  </div>
+</footer>
+<script src="js/pubs.js"></script>
+<script>
+let filter = "all", query = "";
+const list = document.getElementById("list"), count = document.getElementById("count");
+function render() {
+  const q = query.trim().toLowerCase();
+  const rows = PUBS.filter(p =>
+    (filter === "all" || (p.k || []).includes(filter)) &&
+    (!q || (p.t + " " + p.a + " " + p.v).toLowerCase().includes(q)));
+  count.textContent = rows.length + (rows.length === 1 ? " paper" : " papers");
+  list.innerHTML = rows.length ? rows.map(p => `
+    <div class="pub">
+      <div class="n">${p.y}</div>
+      <div class="body">
+        <p class="t">${p.t}</p>
+        <p class="a">${p.a}</p>
+        <p class="v">${p.v}${p.doi ? ` &middot; <a href="https://doi.org/${p.doi}" target="_blank" rel="noopener">doi</a>` : ""}</p>
+        <div class="tags">
+          ${(p.k || []).map(k => `<span class="tag">${AREAS[k]}</span>`).join("")}
+          ${p.award ? `<span class="tag award">${p.award}</span>` : ""}
+        </div>
+      </div>
+    </div>`).join("")
+    : `<p style="color:var(--ink-3);padding:22px 0">Nothing matches that search.</p>`;
+}
+document.querySelectorAll(".chip").forEach(c => c.addEventListener("click", () => {
+  document.querySelectorAll(".chip").forEach(x => x.classList.remove("on"));
+  c.classList.add("on"); filter = c.dataset.k; render();
+}));
+document.getElementById("q").addEventListener("input", e => { query = e.target.value; render(); });
+document.getElementById("patents").innerHTML = PATENTS.map(p => `
+  <div class="pub"><div class="n">${p.y}</div><div class="body">
+    <p class="t">${p.t}</p><p class="a">${p.a}</p><p class="v">${p.v}</p></div></div>`).join("");
+render();
+</script>
+</body>
+</html>

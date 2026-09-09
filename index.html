@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="author" content="Wuttipong Kumwilaisak">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<script src="js/site.js"></script>
+<title>Wuttipong Kumwilaisak</title>
+<meta name="description" content="Wuttipong Kumwilaisak, Professor of Electronics and Telecommunication Engineering at King Mongkut's University of Technology Thonburi. Research on multimedia communication, computer vision and machine learning.">
+</head>
+<body>
+<nav class="nav">
+  <div class="wrap">
+    <a class="brand" href="index.html">Wuttipong Kumwilaisak</a>
+    <div class="menu">
+      <a class="link" href="index.html">Home</a>
+      <a class="link" href="research.html">Research</a>
+      <a class="link" href="publications.html">Publications</a>
+      <a class="link" href="cv.html">CV</a>
+    </div>
+    <button class="iconbtn navtoggle" aria-label="Menu">&#9776;</button>
+    <button class="iconbtn" onclick="toggleTheme()" aria-label="Switch theme">&#9681;</button>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <div class="eyebrow">Professor of Electronics and Telecommunication</div>
+      <h1>Wuttipong Kumwilaisak</h1>
+      <p class="role">King Mongkut's University of Technology Thonburi, Bangkok</p>
+      <p class="lede">I work on the problem of getting information reliably from a sensor to a person.
+      That has taken me through video compression and transmission, network coding and caching, and
+      more recently through computer vision and machine learning for medical, industrial and
+      assistive applications.</p>
+      <div class="pills">
+        <span class="pill">Senior Member, IEEE</span>
+        <span class="pill">APSIPA Distinguished Lecturer 2026 to 2027</span>
+        <span class="pill">Senior Fellow, Higher Education Academy</span>
+      </div>
+      <div class="cta">
+        <a class="btn primary" href="publications.html">Publications</a>
+        <a class="btn" href="research.html">Research</a>
+        <a class="btn" href="cv.html">Curriculum vitae</a>
+        <a class="btn" href="mailto:wuttipong.kum@kmutt.ac.th">Email</a>
+      </div>
+    </div>
+    <div class="portrait"><img src="assets/portrait.jpg" alt="Wuttipong Kumwilaisak"></div>
+  </div>
+</header>
+
+<section>
+  <div class="wrap">
+    <div class="stats reveal">
+      <div class="stat"><div class="v">31</div><div class="l">Journal papers</div></div>
+      <div class="stat"><div class="v">2</div><div class="l">US patents</div></div>
+      <div class="stat"><div class="v">785</div><div class="l">Citations</div></div>
+      <div class="stat"><div class="v">15</div><div class="l">h index</div></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="sechead reveal">
+      <h2>Research interests</h2>
+      <p class="sub">Four threads, connected by one question. Which part of a signal has to survive, and what is it worth spending to protect it.</p>
+    </div>
+    <div class="grid2">
+      <div class="card reveal"><span class="num">01</span><h3>Multimedia compression and processing</h3>
+        <p>Coding, error concealment and quality preservation for images and video, including
+        multi view coding and artifact analysis.</p></div>
+      <div class="card reveal"><span class="num">02</span><h3>Multimedia communication over networks</h3>
+        <p>Scalable video delivery, network coding, caching in content centric networks, and cross
+        layer quality of service for wireless links.</p></div>
+      <div class="card reveal"><span class="num">03</span><h3>Computer vision and image processing</h3>
+        <p>Denoising, segmentation and detection, applied to medical imaging, industrial inspection
+        and sign language recognition.</p></div>
+      <div class="card reveal"><span class="num">04</span><h3>Machine learning and artificial intelligence</h3>
+        <p>Representation learning, reinforcement learning and generative models, applied where the
+        decision has a cost, such as clinical and emergency response settings.</p></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="sechead reveal">
+      <h2>Selected work</h2>
+      <p class="sub">Four papers that mark the turns in the research, from cross layer video delivery to sign pose generation.</p>
+    </div>
+    <div id="selected"></div>
+    <p style="margin-top:22px"><a href="publications.html">All 31 journal papers and 2 patents</a></p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="sechead reveal">
+      <h2>Recent recognition</h2>
+      <p class="sub">Selected from the full list on the curriculum vitae.</p>
+    </div>
+    <ul class="awards">
+      <li><span class="yr">2026-27</span><span class="what">APSIPA Distinguished Lecturer</span></li>
+      <li><span class="yr">2025</span><span class="what">Best Paper Award, 13th International Conference on Information and Communication Technology</span></li>
+      <li><span class="yr">2024</span><span class="what">Thailand National Research Award</span></li>
+      <li><span class="yr">2024</span><span class="what">Gold Medal, Student Innovation Challenge Thailand</span></li>
+      <li><span class="yr">2023</span><span class="what">Thailand National Research Award</span></li>
+      <li><span class="yr">2022</span><span class="what">Thailand National Research Award</span></li>
+    </ul>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <span>Wuttipong Kumwilaisak, King Mongkut's University of Technology Thonburi</span>
+    <span><a href="mailto:wuttipong.kum@kmutt.ac.th">wuttipong.kum@kmutt.ac.th</a></span>
+  </div>
+</footer>
+<script src="js/pubs.js"></script>
+<script>
+const pick = [31, 29, 25, 1];
+document.getElementById("selected").innerHTML = pick.map(n => {
+  const p = PUBS.find(x => x.n === n);
+  return `<div class="pub"><div class="n">${p.y}</div><div class="body">
+    <p class="t">${p.t}</p><p class="a">${p.a}</p><p class="v">${p.v}</p>
+    ${p.award ? `<div class="tags"><span class="tag award">${p.award}</span></div>` : ""}
+  </div></div>`;
+}).join("");
+</script>
+</body>
+</html>

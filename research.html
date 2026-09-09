@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="author" content="Wuttipong Kumwilaisak">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<script src="js/site.js"></script>
+<title>Research | Wuttipong Kumwilaisak</title>
+<meta name="description" content="Research on multimedia compression, communication over networks, computer vision and machine learning.">
+</head>
+<body>
+<nav class="nav">
+  <div class="wrap">
+    <a class="brand" href="index.html">Wuttipong Kumwilaisak</a>
+    <div class="menu">
+      <a class="link" href="index.html">Home</a>
+      <a class="link" href="research.html">Research</a>
+      <a class="link" href="publications.html">Publications</a>
+      <a class="link" href="cv.html">CV</a>
+    </div>
+    <button class="iconbtn navtoggle" aria-label="Menu">&#9776;</button>
+    <button class="iconbtn" onclick="toggleTheme()" aria-label="Switch theme">&#9681;</button>
+  </div>
+</nav>
+
+<section style="border-top:0">
+  <div class="wrap">
+    <div class="eyebrow">Research</div>
+    <h1 style="font-size:38px;margin:10px 0 14px">What I work on</h1>
+    <p class="lede">The through line is the same across twenty five years. A signal is captured,
+    it is damaged by the channel or the sensor, and someone at the far end has to act on it. The
+    question is always which part of the signal has to survive, and how to spend a limited budget
+    protecting it.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>Multimedia compression and processing</h2>
+    <p class="sub">Where the work began.</p>
+    <p style="max-width:70ch;color:var(--ink-2)">Video coding is an exercise in deciding what to
+    discard. My early work looked at what happens when the discarded part matters, through spatial
+    error concealment that rebuilds lost regions from the texture around them, and through rate
+    distortion analysis for multi view coding where several cameras see the same scene. Two United
+    States patents came out of the industrial side of this, on detecting and reducing visual
+    artifacts in digital video.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>Multimedia communication over networks</h2>
+    <p class="sub">Delivering that signal when the channel does not cooperate.</p>
+    <p style="max-width:70ch;color:var(--ink-2)">A wireless channel fades and a network drops
+    packets, and a video stream has to degrade gracefully rather than collapse. This line of work
+    covers cross layer mapping between application quality and network service, fading channel
+    models built from variable length Markov chains, network coding for scalable multicast, and
+    caching policies for content centric networks that decide what to keep near the edge.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>Computer vision and image processing</h2>
+    <p class="sub">The same question, now about images that a person has to read.</p>
+    <p style="max-width:70ch;color:var(--ink-2)">Recent work applies learned models to images where
+    being wrong has a cost. That includes denoising under Poisson noise, defect segmentation with
+    limited labels, crack detection in concrete from depth and graph structure, protective equipment
+    detection on work sites, and retinal image analysis. A continuing interest is that a model
+    trained on a pixel error is not automatically trained on what a specialist actually looks at.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>Machine learning and artificial intelligence</h2>
+    <p class="sub">Learning where the decision carries consequence.</p>
+    <p style="max-width:70ch;color:var(--ink-2)">This covers sign language recognition and
+    generation, which asks a model to read fast articulated motion in the wild, speech enhancement
+    for people who have lost the larynx, rehabilitation exercise assessment, intensive care mortality
+    prediction, and emergency dispatch under risk. What these share is that an error is not a
+    number, it is a person who is not understood or not reached in time.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>Funded projects</h2>
+    <p class="sub">From the KMUTT research information system.</p>
+    <div class="tl">
+      <div class="tl-item reveal"><h3>Combining a depth camera and a high resolution colour camera for accurate three dimensional modelling</h3>
+        <div class="where">National Research University programme</div><div class="when">2013 to 2014</div></div>
+      <div class="tl-item reveal"><h3>Coding and transmission of multimedia over next generation networks</h3>
+        <div class="where">National Research University programme, renewed across three cycles</div><div class="when">2010 to 2013</div></div>
+      <div class="tl-item reveal"><h3>Preserving the quality of still images and video</h3>
+        <div class="where">Department of Electronics and Telecommunication Engineering</div><div class="when">2005 to 2006</div></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>Collaboration</h2>
+    <p style="max-width:70ch;color:var(--ink-2)">I supervise graduate students at KMUTT and
+    collaborate with the National Electronics and Computer Technology Center and with industry.
+    If your problem involves a signal that has to survive a lossy path and then be read by a person
+    or a downstream system, it is probably close to something I have worked on.</p>
+    <div class="cta" style="margin-top:18px">
+      <a class="btn primary" href="mailto:wuttipong.kum@kmutt.ac.th">Get in touch</a>
+      <a class="btn" href="publications.html">See the publications</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <span>Wuttipong Kumwilaisak, King Mongkut's University of Technology Thonburi</span>
+    <span><a href="mailto:wuttipong.kum@kmutt.ac.th">wuttipong.kum@kmutt.ac.th</a></span>
+  </div>
+</footer>
+
+</body>
+</html>
