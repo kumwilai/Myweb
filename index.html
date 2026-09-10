@@ -140,6 +140,9 @@ const chosen = PUBS.filter(p => KEEP.test(p.v) || (p.c || 0) >= CITED_AT_LEAST)
                    .sort((a, b) => (b.c || 0) - (a.c || 0) || b.y - a.y);
 document.getElementById("selected").innerHTML = chosen.map(p => {
   const tags = [];
+  // The venue is named on the line above, but an IEEE Transactions paper is worth
+  // flagging so it is visible when the list is scanned rather than read.
+  if (/^IEEE Transactions/.test(p.v)) tags.push(`<span class="tag">IEEE Transactions</span>`);
   if (p.c) tags.push(`<span class="tag">${p.c} citations</span>`);
   if (p.award) tags.push(`<span class="tag award">${p.award}</span>`);
   return `<div class="pub"><div class="n">${p.y}</div><div class="body">
