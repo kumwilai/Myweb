@@ -93,8 +93,8 @@
   <div class="wrap">
     <div class="sechead reveal">
       <h2>Selected work</h2>
-      <p class="sub">Every IEEE Transactions and IEEE flagship journal paper, together with the two
-      papers that mark the most recent turn in the research.</p>
+      <p class="sub">Ten papers in IEEE journals and in Expert Systems with Applications, newest
+      first. Each carries the venue.</p>
     </div>
     <div id="selected"></div>
     <p style="margin-top:22px"><a href="publications.html">All 31 journal papers and 2 patents</a></p>
@@ -126,17 +126,16 @@
 </footer>
 <script src="js/pubs.js"></script>
 <script>
-// The IEEE Transactions and the IEEE flagship journal papers are found in the data
-// rather than listed by hand, so adding one to js/pubs.js is enough to have it
-// appear here. Two further papers are named explicitly because they mark the most
-// recent turn in the research rather than the venue they appeared in.
-const FLAGSHIP = /IEEE Transactions|IEEE Journal on Selected Areas/;
-const alsoShow = [31, 25];
-const chosen = PUBS.filter(p => FLAGSHIP.test(p.v) || alsoShow.includes(p.n))
+// The papers shown here are found in the data rather than listed by hand, so adding
+// one to js/pubs.js is enough to have it appear on this page too. The rule is any
+// IEEE journal, matched at the start of the venue so that APSIPA, IEICE and ECTI
+// Transactions are not caught by the word Transactions alone, plus Expert Systems
+// with Applications.
+const SHOW = /^IEEE|^Expert Systems with Applications/;
+const chosen = PUBS.filter(p => SHOW.test(p.v))
                    .sort((a, b) => b.y - a.y || b.n - a.n);
 document.getElementById("selected").innerHTML = chosen.map(p => {
-  const tags = [];
-  if (FLAGSHIP.test(p.v)) tags.push(`<span class="tag">${p.v.split(",")[0]}</span>`);
+  const tags = [`<span class="tag">${p.v.split(",")[0]}</span>`];
   if (p.award) tags.push(`<span class="tag award">${p.award}</span>`);
   return `<div class="pub"><div class="n">${p.y}</div><div class="body">
     <p class="t">${p.t}</p><p class="a">${p.a}</p><p class="v">${p.v}</p>
