@@ -35,3 +35,25 @@ document.addEventListener("DOMContentLoaded", function () {
   }, { rootMargin: "0px 0px -8% 0px", threshold: .08 });
   items.forEach(el => io.observe(el));
 });
+
+// Visitor counting.
+//
+// GitHub Pages serves static files and keeps no logs you can read, so counting
+// visits needs a small external service. This loads GoatCounter, which is free for
+// a personal site, sets no cookies and stores no personal data, so no consent
+// banner is needed for visitors in the European Union. That is the reason for
+// choosing it over Google Analytics, which would need one.
+//
+// To switch it on, put your GoatCounter site code between the quotes below. It is
+// the first part of the address you are given when you register, so for
+// kumwilai.goatcounter.com the code is "kumwilai". Until then the constant stays
+// empty and nothing is loaded and nothing is sent anywhere.
+const ANALYTICS_CODE = "";
+
+if (ANALYTICS_CODE) {
+  const s = document.createElement("script");
+  s.async = true;
+  s.dataset.goatcounter = "https://" + ANALYTICS_CODE + ".goatcounter.com/count";
+  s.src = "https://gc.zgo.at/count.js";
+  document.head.appendChild(s);
+}

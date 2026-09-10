@@ -30,3 +30,17 @@ bottom of the same file. Add `award:"Best Paper Award"` to mark a prize.
 
 The site is served by GitHub Pages from the default branch. Nothing needs to be
 built or compiled.
+
+## Visitor counting
+
+`js/site.js` ends with an analytics loader that is switched off. GitHub Pages keeps
+no logs you can read, so counting visits needs a small external service.
+
+To switch it on, register the site at `goatcounter.com`, then put the code you are
+given into `ANALYTICS_CODE` in `js/site.js`. For `example.goatcounter.com` the code
+is `example`. Until that constant holds a value, no script is loaded and nothing is
+sent anywhere.
+
+GoatCounter was chosen because it is free for a personal site, sets no cookies and
+stores no personal data, so the page needs no consent banner for visitors in the
+European Union. Google Analytics would need one.
