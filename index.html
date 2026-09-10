@@ -93,8 +93,9 @@
   <div class="wrap">
     <div class="sechead reveal">
       <h2>Selected work</h2>
-      <p class="sub">Ten papers in IEEE journals and in Expert Systems with Applications, newest
-      first. Each carries the venue.</p>
+      <p class="sub">The most cited papers, together with every IEEE Transactions paper and the
+      work in Expert Systems with Applications. Ordered by citations, from Google Scholar in
+      September 2026.</p>
     </div>
     <div id="selected"></div>
     <p style="margin-top:22px"><a href="publications.html">All 31 journal papers and 2 patents</a></p>
@@ -126,16 +127,20 @@
 </footer>
 <script src="js/pubs.js"></script>
 <script>
-// The papers shown here are found in the data rather than listed by hand, so adding
-// one to js/pubs.js is enough to have it appear on this page too. The rule is any
-// IEEE journal, matched at the start of the venue so that APSIPA, IEICE and ECTI
-// Transactions are not caught by the word Transactions alone, plus Expert Systems
-// with Applications.
-const SHOW = /^IEEE|^Expert Systems with Applications/;
-const chosen = PUBS.filter(p => SHOW.test(p.v))
-                   .sort((a, b) => b.y - a.y || b.n - a.n);
+// Chosen from the data rather than listed by hand, so adding a paper to js/pubs.js
+// is enough for it to appear here when it qualifies.
+//
+// Three ways in. An IEEE Transactions paper, matched at the start of the venue so
+// that the APSIPA, IEICE and ECTI Transactions are not caught by the word
+// Transactions on its own. The paper in Expert Systems with Applications. Or a
+// citation count at or above the threshold below.
+const CITED_AT_LEAST = 25;
+const KEEP = /^IEEE Transactions|^Expert Systems with Applications/;
+const chosen = PUBS.filter(p => KEEP.test(p.v) || (p.c || 0) >= CITED_AT_LEAST)
+                   .sort((a, b) => (b.c || 0) - (a.c || 0) || b.y - a.y);
 document.getElementById("selected").innerHTML = chosen.map(p => {
-  const tags = [`<span class="tag">${p.v.split(",")[0]}</span>`];
+  const tags = [];
+  if (p.c) tags.push(`<span class="tag">${p.c} citations</span>`);
   if (p.award) tags.push(`<span class="tag award">${p.award}</span>`);
   return `<div class="pub"><div class="n">${p.y}</div><div class="body">
     <p class="t">${p.t}</p><p class="a">${p.a}</p><p class="v">${p.v}</p>
