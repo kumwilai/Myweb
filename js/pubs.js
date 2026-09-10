@@ -35,7 +35,7 @@ const PUBS = [
  {n:4,y:2009,t:"Rate distortion analysis and bit allocation scheme for wavelet lifting-based multi-view image coding",a:"P. Lasang, W. Kumwilaisak",v:"EURASIP Journal on Advances in Signal Processing, vol. 2009, art. 394065",k:["media"]},
  {n:3,y:2009,t:"Rate-complexity scalable multi-view image coding with adaptive disparity-compensated wavelet lifting",a:"P. Lasang, C.-S. Kim, W. Kumwilaisak",v:"Journal of Information and Computing Science, vol. 4, no. 3, pp. 211-223",k:["media"]},
  {n:2,y:2008,c:21,t:"Fading channel modeling via variable length Markov chain technique",a:"W. Kumwilaisak, C.-C. Jay Kuo, D. Wu",v:"IEEE Transactions on Vehicular Technology, vol. 57, no. 3, pp. 1338-1358",k:["networks"]},
- {n:1,y:2003,c:155,t:"A cross-layer quality-of-service mapping architecture for video delivery in wireless networks",a:"W. Kumwilaisak, Y. T. Hou, Q. Zhang, W. Zhu, C.-C. Jay Kuo, Ya-Qin Zhang",v:"IEEE Journal on Selected Areas in Communications, vol. 21, no. 10, pp. 1685-1698",k:["media","networks"],award:"Best Paper Award"}
+ {n:1,y:2003,c:155,t:"A cross-layer quality-of-service mapping architecture for video delivery in wireless networks",a:"W. Kumwilaisak, Y. T. Hou, Q. Zhang, W. Zhu, C.-C. Jay Kuo, Ya-Qin Zhang",v:"IEEE Journal on Selected Areas in Communications, vol. 21, no. 10, pp. 1685-1698",k:["media","networks"],award:"Best Paper Award, IEEE ComSoc Multimedia Communications Technical Committee, 2004"}
 ];
 
 const PATENTS = [
