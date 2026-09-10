@@ -3,10 +3,11 @@
 Static site for Professor Wuttipong Kumwilaisak, Department of Electronics and
 Telecommunication Engineering, King Mongkut's University of Technology Thonburi.
 
-Four pages, no build step, no framework. Open `index.html` in a browser to view it locally.
+Five pages, no build step, no framework. Open `index.html` in a browser to view it locally.
 
     index.html         home, research interests, selected work, recent recognition
-    research.html      the four research threads and funded projects
+    research.html      the four research threads, with a short funded projects summary
+    projects.html      seventeen funded projects from 2005 to 2027, grouped by purpose
     publications.html  31 journal papers and 2 patents, searchable and filterable
     cv.html            education, appointments, honours, service and contact
 
