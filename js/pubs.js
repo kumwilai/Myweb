@@ -1,7 +1,7 @@
 // Journal publications, newest first. Kept as data so every page can reuse it.
 //
 // The c field is the citation count from the Google Scholar profile, read on
-// 10 September 2026. It is present only for the papers the profile lists in its
+// 6 October 2026. It is present only for the papers the profile lists in its
 // top results. A paper with no c field has fewer citations than the lowest of
 // those, and is deliberately left blank rather than written as zero.
 const PUBS = [
@@ -12,11 +12,11 @@ const PUBS = [
  {n:28,y:2026,t:"Intelligent EMS dispatch via adaptive learning with counterfactual and risk-aware optimization",a:"W. Kumwilaisak",v:"IEEE Access, vol. 14, pp. 31804-31823",k:["learning"]},
  {n:27,y:2026,t:"Spatial-temporal transformers with stochastic time-warping and joint-wise encoding for rehabilitation exercise assessment",a:"T. Matangkasombut, W. Kumwilaisak, C. Hansakunbuntheung, N. Thatphithakkul",v:"IEEE Open Journal of the Computer Society, vol. 7, pp. 190-201",k:["vision","learning"]},
  {n:26,y:2025,t:"Robust ICU mortality prediction with multi-task diffusion and contrastive learning frameworks",a:"N. Buranaburustam, W. Kumwilaisak, C. Hansakunbuntheung, N. Thatphithakkul, K. Kumwilaisak",v:"APSIPA Transactions on Signal and Information Processing, vol. 14, no. 1",k:["learning"]},
- {n:25,y:2024,c:17,t:"American sign language fingerspelling recognition in the wild with spatio temporal feature extraction and multi-task learning",a:"P. Pannattee, W. Kumwilaisak, C. Hansakunbuntheun, N. Thatphithakkul, C.-C. Jay Kuo",v:"Expert Systems with Applications, vol. 243",k:["vision","learning"]},
+ {n:25,y:2024,c:18,t:"American sign language fingerspelling recognition in the wild with spatio temporal feature extraction and multi-task learning",a:"P. Pannattee, W. Kumwilaisak, C. Hansakunbuntheun, N. Thatphithakkul, C.-C. Jay Kuo",v:"Expert Systems with Applications, vol. 243",k:["vision","learning"]},
  {n:24,y:2023,t:"Novel personal protective equipment detection technique with attention-based YOLOv7 and human pose estimation",a:"K. O. Monnikhof, P. Areerob, W. Zheng, T. Tanasnitikul, W. Kumwilaisak",v:"APSIPA Transactions on Signal and Information Processing, vol. 12, no. 1",k:["vision"]},
  {n:23,y:2022,t:"American sign language fingerspelling recognition in the wild with iterative language model construction",a:"W. Kumwilaisak, P. Pannattee, C. Hansakunbuntheun, N. Thatphithakkul",v:"APSIPA Transactions on Signal and Information Processing, vol. 11, no. 1",k:["vision","learning"]},
- {n:22,y:2022,c:19,t:"Semi-supervised learning for defect segmentation with autoencoder auxiliary module",a:"B. Sae-Ang, W. Kumwilaisak, P. Kaewtrakulpong",v:"Sensors, vol. 22, no. 8, p. 2915",k:["vision","learning"]},
- {n:21,y:2022,c:27,t:"Adaptive call center workforce management with deep neural network and reinforcement learning",a:"W. Kumwilaisak, S. Phikulngoen, J. Piriyataravet, N. Thatphithakkul, C. Hansakunbuntheun",v:"IEEE Access, vol. 10, pp. 35712-35724",k:["learning"]},
+ {n:22,y:2022,c:20,t:"Semi-supervised learning for defect segmentation with autoencoder auxiliary module",a:"B. Sae-Ang, W. Kumwilaisak, P. Kaewtrakulpong",v:"Sensors, vol. 22, no. 8, p. 2915",k:["vision","learning"]},
+ {n:21,y:2022,c:26,t:"Adaptive call center workforce management with deep neural network and reinforcement learning",a:"W. Kumwilaisak, S. Phikulngoen, J. Piriyataravet, N. Thatphithakkul, C. Hansakunbuntheun",v:"IEEE Access, vol. 10, pp. 35712-35724",k:["learning"]},
  {n:20,y:2021,t:"Determining bus stop locations using deep learning and time filtering",a:"J. Piriyataravet, W. Kumwilaisak, J. Chinrungrueng, T. Piriyataravet",v:"Engineering Journal, vol. 25, no. 8, pp. 1-12",k:["learning"]},
  {n:19,y:2020,c:40,t:"Image denoising with deep convolutional neural and multi-directional long short-term memory networks under Poisson noise environments",a:"W. Kumwilaisak, T. Piriyatharawet, P. Lasang, N. Thatphithakkul",v:"IEEE Access, vol. 8, pp. 86998-87010",k:["vision","learning"]},
  {n:18,y:2019,c:17,t:"Adaptive probabilistic caching technique for caching networks with dynamic content popularity",a:"S. Tarnoi, W. Kumwilaisak, V. Suppakitpaisarn, K. Fukuda, Y. Ji",v:"Computer Communications, vol. 139, no. 1, pp. 1-15",k:["networks"]},

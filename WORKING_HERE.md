@@ -35,7 +35,7 @@ selected work on the home page picks it up automatically if it qualifies, which
 means an IEEE Transactions paper, the Expert Systems with Applications paper, or
 anything with at least twenty five citations.
 
-The `c` field is the citation count from Google Scholar, read on 10 September 2026.
+The `c` field is the citation count from Google Scholar, read on 6 October 2026.
 It is only present for papers the profile lists in its top results. Leave it absent
 rather than writing zero for a paper you do not have a number for, because zero is
 a claim and absent is not.
