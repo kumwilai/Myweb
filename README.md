@@ -8,7 +8,7 @@ Five pages, no build step, no framework. Open `index.html` in a browser to view 
     index.html         home, research interests, selected work, recent recognition
     research.html      the four research threads, with a short funded projects summary
     projects.html      seventeen funded projects from 2005 to 2027, grouped by purpose
-    publications.html  31 journal papers and 2 patents, searchable and filterable
+    publications.html  32 journal papers and 2 patents, searchable and filterable
     cv.html            education, appointments, honours, service and contact
 
     css/style.css      the whole design
@@ -20,7 +20,7 @@ Five pages, no build step, no framework. Open `index.html` in a browser to view 
 
 Edit `js/pubs.js` and add an entry at the top of the `PUBS` array.
 
-    {n:32, y:2026, t:"Title", a:"Authors", v:"Venue, volume, pages",
+    {n:33, y:2026, t:"Title", a:"Authors", v:"Venue, volume, pages",
      doi:"10.1109/...", k:["learning","vision"]}
 
 The `k` field controls the topic filter. Valid keys are listed in `AREAS` at the

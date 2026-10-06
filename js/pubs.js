@@ -5,6 +5,7 @@
 // top results. A paper with no c field has fewer citations than the lowest of
 // those, and is deliberately left blank rather than written as zero.
 const PUBS = [
+ {n:32,y:2026,t:"Backbone-modular neuro-symbolic post-correction for OCT denoising via explicit predicate maps and stable fuzzy allocation",a:"W. Kumwilaisak, T. Matangkasombut",v:"IEEE Open Journal of the Computer Society, accepted for publication",k:["vision","learning"]},
  {n:31,y:2026,t:"AHA-JEPA, articulated hand-aware JEPA for leak-free gloss conditioned sign pose generation",a:"W. Kumwilaisak",v:"IEEE Access, vol. 14, pp. 128559-128580",doi:"10.1109/ACCESS.2026.3716809",k:["vision","learning"]},
  {n:30,y:2026,t:"Attention-driven alaryngeal speech enhancement via discrete representation learning and timbre-preserving augmentation",a:"H. Y. Lwin, W. Kumwilaisak, C. Hansakunbuntheung, N. Thatphithakkul",v:"IEEE Open Journal of the Computer Society, vol. 7, pp. 1236-1247",k:["speech","learning"]},
  {n:29,y:2026,t:"CrackNet-GNN, unsupervised crack detection in concrete structures via depth-based segmentation and graph neural networks",a:"H. T. Aung, W. Kumwilaisak, S. Maneemool, N. Suthonadisonwong, K. Saeton",v:"IEEE Transactions on Industrial Informatics, vol. 22, no. 6, pp. 4980-4991",doi:"10.1109/TII.2026.3666722",k:["vision","learning"]},
