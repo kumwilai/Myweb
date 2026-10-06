@@ -21,7 +21,7 @@ or serve the folder if you want the paths to behave exactly as they do live.
 
     index.html         home, research interests, selected work, recognition
     research.html      the four research threads and a funded projects summary
-    projects.html      the seventeen funded projects, grouped by purpose
+    projects.html      the nineteen funded projects, grouped by purpose
     publications.html  the journal papers and patents, searchable
     cv.html            education, appointments, honours, service, contact
     js/pubs.js         the publication data, shared by every page
