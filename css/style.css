@@ -166,6 +166,10 @@ h2 {
 .stat .v { font-family: var(--serif); font-size: 30px; font-weight: 600; letter-spacing: -.02em;
   font-variant-numeric: tabular-nums; line-height: 1.1; }
 .stat .l { color: var(--ink-3); font-size: 12.5px; margin-top: 5px; letter-spacing: .04em; text-transform: uppercase; }
+.stats.three { grid-template-columns: repeat(3, 1fr); }
+a.stat { color: var(--ink); transition: background .18s ease; }
+a.stat .v { color: var(--accent); }
+a.stat:hover { text-decoration: none; background: var(--accent-wash); }
 
 /* ---------- timeline ---------- */
 .tl { position: relative; padding-left: 30px; }
@@ -252,6 +256,7 @@ footer .wrap { display: flex; flex-wrap: wrap; gap: 14px; align-items: center; j
   .portrait { max-width: 208px; }
   .grid2, .grid3, .contact-grid { grid-template-columns: 1fr; }
   .stats { grid-template-columns: repeat(2, 1fr); }
+  .stats.three .stat:last-child { grid-column: 1 / -1; }
   .nav .menu {
     display: none; position: absolute; top: 66px; left: 0; right: 0; flex-direction: column;
     background: var(--surface); border-bottom: 1px solid var(--rule); padding: 12px 18px; gap: 2px;
