@@ -34,13 +34,8 @@
     <h1 style="font-size:38px;margin:10px 0 12px">Journal papers and patents</h1>
     <p class="lede">Thirty two peer reviewed journal papers and two United States patents. Search by
     title, author or venue, or filter by topic. The list is newest first.</p>
-    <div class="pills">
-      <span class="pill">788 citations</span>
-      <span class="pill">h index 15</span>
-      <span class="pill">i10 index 21</span>
-    </div>
-    <p class="sub" style="margin-top:-14px">Google Scholar, observed September 2026.
-      <a href="https://scholar.google.com/citations?user=QSeweikAAAAJ&amp;hl=en" target="_blank" rel="noopener">Profile</a>
+    <p class="sub">Citation counts are kept on Google Scholar, and every paper below links to its entry.
+      <a href="https://scholar.google.com/citations?user=QSeweikAAAAJ&amp;hl=en" target="_blank" rel="noopener">Google Scholar profile</a>
       &middot; <a href="https://orcid.org/0000-0002-2957-6084" target="_blank" rel="noopener">ORCID</a>
       &middot; <a href="https://ieeexplore.ieee.org/author/37299722400" target="_blank" rel="noopener">IEEE Xplore</a>
     </p>
@@ -93,7 +88,7 @@ function render() {
       <div class="body">
         <p class="t">${p.t}</p>
         <p class="a">${p.a}</p>
-        <p class="v">${p.v}${p.doi ? ` &middot; <a href="https://doi.org/${p.doi}" target="_blank" rel="noopener">doi</a>` : ""}</p>
+        <p class="v">${p.v}${p.doi ? ` &middot; <a href="https://doi.org/${p.doi}" target="_blank" rel="noopener">doi</a>` : ""} &middot; <a href="${scholarUrl(p)}" target="_blank" rel="noopener">Google Scholar</a></p>
         <div class="tags">
           ${(p.k || []).map(k => `<span class="tag">${AREAS[k]}</span>`).join("")}
           ${p.award ? `<span class="tag award">${p.award}</span>` : ""}
@@ -109,7 +104,8 @@ document.querySelectorAll(".chip").forEach(c => c.addEventListener("click", () =
 document.getElementById("q").addEventListener("input", e => { query = e.target.value; render(); });
 document.getElementById("patents").innerHTML = PATENTS.map(p => `
   <div class="pub"><div class="n">${p.y}</div><div class="body">
-    <p class="t">${p.t}</p><p class="a">${p.a}</p><p class="v">${p.v}</p></div></div>`).join("");
+    <p class="t">${p.t}</p><p class="a">${p.a}</p>
+    <p class="v">${p.v} &middot; <a href="${scholarUrl(p)}" target="_blank" rel="noopener">Google Scholar</a></p></div></div>`).join("");
 render();
 </script>
 </body>

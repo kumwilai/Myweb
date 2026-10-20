@@ -95,8 +95,8 @@
     <div class="sechead reveal">
       <h2>Selected work</h2>
       <p class="sub">The most cited papers, together with every IEEE Transactions paper and the
-      work in Expert Systems with Applications. Ordered by citations, from Google Scholar in
-      October 2026.</p>
+      work in Expert Systems with Applications. Ordered by Google Scholar citations, and each
+      paper links to its Scholar entry.</p>
     </div>
     <div id="selected"></div>
     <p style="margin-top:22px"><a href="publications.html">All 32 journal papers and 2 patents</a></p>
@@ -146,10 +146,10 @@ document.getElementById("selected").innerHTML = chosen.map(p => {
   // The venue is named on the line above, but an IEEE Transactions paper is worth
   // flagging so it is visible when the list is scanned rather than read.
   if (/^IEEE Transactions/.test(p.v)) tags.push(`<span class="tag">IEEE Transactions</span>`);
-  if (p.c) tags.push(`<span class="tag">${p.c} citations</span>`);
   if (p.award) tags.push(`<span class="tag award">${p.award}</span>`);
   return `<div class="pub"><div class="n">${p.y}</div><div class="body">
-    <p class="t">${p.t}</p><p class="a">${p.a}</p><p class="v">${p.v}</p>
+    <p class="t">${p.t}</p><p class="a">${p.a}</p>
+    <p class="v">${p.v}${p.doi ? ` &middot; <a href="https://doi.org/${p.doi}" target="_blank" rel="noopener">doi</a>` : ""} &middot; <a href="${scholarUrl(p)}" target="_blank" rel="noopener">Google Scholar</a></p>
     ${tags.length ? `<div class="tags">${tags.join("")}</div>` : ""}
   </div></div>`;
 }).join("");
