@@ -19,7 +19,7 @@ or serve the folder if you want the paths to behave exactly as they do live.
 
 ## Where things are
 
-    index.html         home, research interests, selected work, recognition
+    index.html         home: introduction, counts and selected work
     research.html      the four research threads and a funded projects summary
     projects.html      the nineteen funded projects, grouped by purpose
     publications.html  the journal papers and patents, searchable
