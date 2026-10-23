@@ -7,7 +7,7 @@ Five pages, no build step, no framework. Open `index.html` in a browser to view 
 
     index.html         home: introduction, counts and selected work
     research.html      the four research threads, with a short funded projects summary
-    projects.html      nineteen funded projects from 2005 to 2027, grouped by purpose
+    projects.html      twenty funded projects from 2005 to 2027, grouped by purpose
     publications.html  32 journal papers and 2 patents, searchable and filterable
     cv.html            education, appointments, honours, service and contact
 
