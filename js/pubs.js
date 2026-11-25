@@ -8,6 +8,8 @@
 // have no such entry (Scholar lists their 2011 conference version and their 2010
 // application instead), so they carry no c rather than a borrowed number.
 const PUBS = [
+ {n:34,y:2026,c:0,t:"Verifiable source routing for provenance-governed text-to-sign generation",a:"W. Kumwilaisak, C.-C. Jay Kuo",v:"IEEE Transactions on Multimedia, accepted for publication",k:["vision","learning"]},
+ {n:33,y:2026,c:0,t:"Acuity-aware congestion-sensitive ICU bed allocation and prioritization via adaptive policy-mixing control",a:"S. Tanutsiriteeradet, W. Kumwilaisak, K. Sujjavorakul",v:"IEEE Access, accepted for publication",k:["learning"]},
  {n:32,y:2026,c:0,t:"Backbone-modular neuro-symbolic post-correction for OCT denoising via explicit predicate maps and stable fuzzy allocation",a:"W. Kumwilaisak, T. Matangkasombut",v:"IEEE Open Journal of the Computer Society, vol. 7, pp. 1487-1499",doi:"10.1109/OJCS.2026.3737104",k:["vision","learning"],gs:"QSeweikAAAAJ:sSrBHYA8nusC"},
  {n:31,y:2026,c:0,t:"AHA-JEPA, articulated hand-aware JEPA for leak-free gloss conditioned sign pose generation",a:"W. Kumwilaisak",v:"IEEE Access, vol. 14, pp. 128559-128580",doi:"10.1109/ACCESS.2026.3716809",k:["vision","learning"],gs:"QSeweikAAAAJ:4fKUyHm3Qg0C"},
  {n:30,y:2026,c:0,t:"Attention-driven alaryngeal speech enhancement via discrete representation learning and timbre-preserving augmentation",a:"H. Y. Lwin, W. Kumwilaisak, C. Hansakunbuntheung, N. Thatphithakkul",v:"IEEE Open Journal of the Computer Society, vol. 7, pp. 1236-1247",doi:"10.1109/ojcs.2026.3696985",k:["speech","learning"],gs:"QSeweikAAAAJ:tS2w5q8j5-wC"},
